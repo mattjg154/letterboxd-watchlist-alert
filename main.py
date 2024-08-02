@@ -44,13 +44,13 @@ def storeIDs(TITLES, IDs):
         writer.writeheader()
         for i in range(0, len(TITLES)):
             writer.writerow({'TITLE': TITLES[i], 'TITLE_ID': IDs[i]})
-    
+
+def formatTitle(TITLE):
+    NEW_TITLE = TITLE.replace(' ', '%20')
+    return NEW_TITLE
 
 TITLES = ["A","b","c"]
 IDs = ["1","2","3"]
-
-for TITLE in TITLES:
-    TITLE = TITLE.replace(' ', '%20')
 
 storeIDs(TITLES,IDs)
 
